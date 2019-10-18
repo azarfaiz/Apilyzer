@@ -1,0 +1,26 @@
+.contentHeight{
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  //margin-top: 70px;
+}
+
+.fileUploadDiv{
+  margin: 280px 400px;
+  width: 40%;
+  height: 70px;
+  background-color: #F16334;
+}
+
+.uploadButton{
+  background-color: white;
+  width: 25%;
+  height: 80%;
+}
+
+.uploadInput{
+  background-color: #F4825D;
+  width: 65%;
+  height: 80%;
+  border-style: none;
+  text-align: center;
+}
