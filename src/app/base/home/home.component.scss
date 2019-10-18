@@ -1,28 +1,16 @@
 .contentHeight{
   height: calc(100vh - 100px);
   overflow-y: auto;
-  //margin-top: 70px;
-}
-
-.homeHeader{
-  margin: 100px 400px;
-  width: 40%;
-  height: 175px;
-}
-
-.homeHeader h1 {
-  font-size: 60px;
-}
-
-.homeHeader p {
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .fileUploadDiv{
-  margin: 75px 400px;
-  width: 40%;
-  height: 75px;
   background-color: #F16334;
+  width: 35%;
+  height: 75px;
 }
 
 .uploadButton{
