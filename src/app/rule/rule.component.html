@@ -1,0 +1,15 @@
+<section>
+  <a (click)="isCollapsed = !isCollapsed"
+     [attr.aria-expanded]="!isCollapsed"
+     aria-controls="collapseBasic">
+    <div class="card card-header">
+      {{ issue.summary }}
+    </div>
+  </a>
+  <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
+    <div class="card card-body">
+      <p class="card-text">{{ issue.description }} </p>
+    </div>
+  </div>
+  <br>
+</section>
