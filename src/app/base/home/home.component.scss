@@ -28,5 +28,12 @@
 }
 
 ::placeholder {
-  color: white;
+  color: #DDD;
+}
+
+#file-upload {
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
+  opacity: 0;
 }
