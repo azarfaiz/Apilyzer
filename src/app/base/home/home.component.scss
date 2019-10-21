@@ -1,5 +1,5 @@
 .contentHeight{
-  height: calc(100vh - 100px);
+  height: calc(100vh - 144px);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -25,4 +25,8 @@
   height: 80%;
   border-style: none;
   text-align: center;
+}
+
+::placeholder {
+  color: white;
 }
