@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    <div style="width:24%; height: 30%;">
+      <ngx-charts-linear-gauge
+        [animations]="true"
+        [max]="100"
+        [min]="0"
+        [value]="70"
+        [units]="'API Standard'"
+      ></ngx-charts-linear-gauge>
+    </div>
+
+    <div style="width:24%; height: 30%;">
+      <ngx-charts-linear-gauge
+        [animations]="true"
+        [max]="100"
+        [min]="0"
+        [value]="45"
+        [units]="'Ease of Use'"
+      ></ngx-charts-linear-gauge>
+    </div>
+
+    <div style="width:24%; height: 30%;">
+      <ngx-charts-linear-gauge
+        [animations]="true"
+        [max]="100"
+        [min]="0"
+        [value]="72"
+        [units]="'Security'"
+      ></ngx-charts-linear-gauge>
+    </div>
+
+    <div style="width:24%; height: 30%;">
+      <ngx-charts-linear-gauge
+        [animations]="true"
+        [max]="100"
+        [min]="0"
+        [value]="48"
+        [units]="'Performance'"
+      ></ngx-charts-linear-gauge>
+    </div>
+  </div>
+
+  <br>
+
+  <!--<ng-container *ngFor="let rule of rules">
+    <h4>{{ rule.category }}</h4>
+    <div class="row">
+      <div class="col-10" *ngFor="let issues of rule.issues">
+        <div class="card card-header">
+          {{ issues.summary }}
+        </div>
+        <div class="card card-body">
+          <p class="card-text">{{ issues.description }} </p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </ng-container>-->
+
+  <app-rule-set
+    *ngFor="let rule of rules"
+    [ruleSet]="rule">
+  </app-rule-set>
+
+
+
+</div>
