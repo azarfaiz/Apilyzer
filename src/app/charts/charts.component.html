@@ -15,7 +15,7 @@
         [animations]="true"
         [max]="100"
         [min]="0"
-        [value]="45"
+        [value]="65"
         [units]="'Ease of Use'"
       ></ngx-charts-linear-gauge>
     </div>
@@ -25,7 +25,7 @@
         [animations]="true"
         [max]="100"
         [min]="0"
-        [value]="72"
+        [value]="50"
         [units]="'Security'"
       ></ngx-charts-linear-gauge>
     </div>
@@ -35,28 +35,13 @@
         [animations]="true"
         [max]="100"
         [min]="0"
-        [value]="48"
+        [value]="60"
         [units]="'Performance'"
       ></ngx-charts-linear-gauge>
     </div>
   </div>
 
   <br>
-
-  <!--<ng-container *ngFor="let rule of rules">
-    <h4>{{ rule.category }}</h4>
-    <div class="row">
-      <div class="col-10" *ngFor="let issues of rule.issues">
-        <div class="card card-header">
-          {{ issues.summary }}
-        </div>
-        <div class="card card-body">
-          <p class="card-text">{{ issues.description }} </p>
-        </div>
-        <br>
-      </div>
-    </div>
-  </ng-container>-->
 
   <app-rule-set
     *ngFor="let rule of rules"

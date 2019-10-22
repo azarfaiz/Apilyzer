@@ -2,13 +2,15 @@
   <a (click)="isCollapsed = !isCollapsed"
      [attr.aria-expanded]="!isCollapsed"
      aria-controls="collapseBasic">
-    <div class="card card-header">
+    <div class="card card-header font-weight-bold">
       {{ issue.summary }}
     </div>
   </a>
   <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
     <div class="card card-body">
       <p class="card-text">{{ issue.description }} </p>
+      <h6 style="text-decoration: underline">REMEDY:</h6>
+      <p class="card-text">{{ issue.remedy }} </p>
     </div>
   </div>
   <br>
