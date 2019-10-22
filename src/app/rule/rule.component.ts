@@ -8,7 +8,7 @@ import {IssuesModel} from "../model/issues.model";
 })
 export class RuleComponent implements OnInit {
 
-  isCollapsed = false;
+  isCollapsed = true;
 
   @Input() issue : IssuesModel;
 
