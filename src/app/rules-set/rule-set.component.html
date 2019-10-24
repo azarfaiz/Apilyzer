@@ -1,8 +1,5 @@
 <section>
-  <h4>{{ ruleSet.category }}</h4>
-  <div class="row">
-    <div class="col-10" >
-      <app-sub-category *ngFor="let subCat of ruleSet.subCategory" [subCategory]="subCat"></app-sub-category>
-    </div>
-  </div>
+  <h4 class="font-weight-normal">{{ ruleSet.category }}</h4>
+  <hr>
+  <app-sub-category *ngFor="let subCat of ruleSet.subCategory" [subCategory]="subCat"></app-sub-category>
 </section>

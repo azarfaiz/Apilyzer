@@ -9,9 +9,10 @@ import {IssuesModel} from "../model/issues.model";
 })
 export class RuleSetComponent implements OnInit {
 
-  @Input() ruleSet : RulesetModel;
+  @Input() ruleSet: RulesetModel;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

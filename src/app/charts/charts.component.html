@@ -1,16 +1,14 @@
 <div class="container">
-  <div class="row">
+  <h2 class="font-weight-light pt-5 text-center"> Analysis Report </h2>
+  <div class="row chart-space">
     <div class="col-3" *ngFor="let rule of rules">
       <app-pie-grid [name]="rule['category']" [value]="rule['score']"></app-pie-grid>
     </div>
-
   </div>
 
   <app-rule-set
     *ngFor="let rule of rules"
     [ruleSet]="rule">
   </app-rule-set>
-
-
 
 </div>
