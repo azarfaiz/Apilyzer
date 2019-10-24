@@ -7,13 +7,14 @@ import {HeaderComponent} from './base/header/header.component';
 import {FooterComponent} from './base/footer/footer.component';
 import {HomeComponent} from './base/home/home.component';
 import {ChartsComponent} from './charts/charts.component';
-import {GaugeModule} from '@swimlane/ngx-charts';
+import {GaugeModule, NgxChartsModule} from '@swimlane/ngx-charts';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RuleSetComponent} from './rules-set/rule-set.component';
 import {CollapseModule} from 'ngx-bootstrap';
 import {SubCategoryComponent} from './sub-category/sub-category.component';
 import {FormsModule} from '@angular/forms';
-import { IssuesComponent } from './issues/issues.component';
+import {IssuesComponent} from './issues/issues.component';
+import {PieGridComponent} from './pie-grid/pie-grid.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,12 @@ import { IssuesComponent } from './issues/issues.component';
     RuleSetComponent,
     SubCategoryComponent,
     IssuesComponent,
+    PieGridComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GaugeModule,
+    NgxChartsModule,
     FormsModule,
     BrowserAnimationsModule,
     CollapseModule
@@ -37,4 +39,5 @@ import { IssuesComponent } from './issues/issues.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

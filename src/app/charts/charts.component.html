@@ -1,44 +1,18 @@
 <div class="container">
   <div class="row">
-    <div style="width:24%; height: 30%;">
-      <ngx-charts-linear-gauge
-        [animations]="true"
-        [max]="100"
-        [min]="0"
-        [value]="60"
-        [units]="'API Standard'"
-      ></ngx-charts-linear-gauge>
+    <div class="col-3">
+      <app-pie-grid name="Standard" [value]="90"></app-pie-grid>
+    </div>
+    <div class="col-3">
+      <app-pie-grid name="Ease of Use" [value]="80"></app-pie-grid>
+    </div>
+    <div class="col-3">
+      <app-pie-grid name="Security" [value]="40"></app-pie-grid>
+    </div>
+    <div class="col-3">
+      <app-pie-grid name="Performance" [value]="70"></app-pie-grid>
     </div>
 
-    <div style="width:24%; height: 30%;">
-      <ngx-charts-linear-gauge
-        [animations]="true"
-        [max]="100"
-        [min]="0"
-        [value]="65"
-        [units]="'Ease of Use'"
-      ></ngx-charts-linear-gauge>
-    </div>
-
-    <div style="width:24%; height: 30%;">
-      <ngx-charts-linear-gauge
-        [animations]="true"
-        [max]="100"
-        [min]="0"
-        [value]="50"
-        [units]="'Security'"
-      ></ngx-charts-linear-gauge>
-    </div>
-
-    <div style="width:24%; height: 30%;">
-      <ngx-charts-linear-gauge
-        [animations]="true"
-        [max]="100"
-        [min]="0"
-        [value]="60"
-        [units]="'Performance'"
-      ></ngx-charts-linear-gauge>
-    </div>
   </div>
 
   <br>
