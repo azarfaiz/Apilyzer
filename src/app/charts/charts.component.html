@@ -1,5 +1,6 @@
-<div class="container">
-  <div class="row">
+<div class="container shadow my-5">
+  <h2 class="font-weight-light pt-5 text-center"> Analysis Report </h2>
+  <div class="row chart-space">
     <div class="col-3">
       <app-pie-grid name="Standard" [value]="90"></app-pie-grid>
     </div>
@@ -14,8 +15,6 @@
     </div>
 
   </div>
-
-  <br>
 
   <app-rule-set
     *ngFor="let rule of rules"
