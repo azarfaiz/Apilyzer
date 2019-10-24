@@ -41,7 +41,7 @@ export class RulesetData {
     },
     {
       category: 'Ease of Use',
-      score: 75,
+      score: 90,
       subCategory: [
         {
           name: 'Ease of Use Sub 1',
@@ -51,7 +51,7 @@ export class RulesetData {
               description: 'Description field is missing at Path object',
               remedy: 'Add description field to the Path object (/new) at line 35',
               severity: 'low',
-              impact: 10
+              impact: 5
             }
           ]
         },
@@ -63,7 +63,7 @@ export class RulesetData {
               description: 'It is a good practice to add description for each error codes',
               remedy: 'Add description to the error codes for the Path object (/new) at line 35',
               severity: 'medium',
-              impact: 15
+              impact: 5
             }
           ]
         }
@@ -71,7 +71,7 @@ export class RulesetData {
     },
     {
       category: 'Security',
-      score: 50,
+      score: 45,
       subCategory: [
         {
           name: 'Security sub category 1',
@@ -83,7 +83,7 @@ export class RulesetData {
               remedy: 'First, define the securityDefinitions or securitySchemes field on the global' +
                 ' level, and list the authentication methods that you plan to use.',
               severity: 'high',
-              impact: 20
+              impact: 25
             },
             {
               summary: 'test',
