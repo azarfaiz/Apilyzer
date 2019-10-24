@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {IssuesModel} from "../model/issues.model";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IssuesModel} from '../model/issues.model';
 
 @Component({
   selector: 'app-issues',
@@ -9,12 +9,17 @@ import {IssuesModel} from "../model/issues.model";
 export class IssuesComponent implements OnInit {
 
   @Input() issues: IssuesModel;
+  @Output() fixed = new EventEmitter();
 
   isCollapsed = true;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  onFix() {
+    this.fixed.emit(this.issues.impact);
+  }
 }

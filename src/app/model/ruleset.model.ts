@@ -1,4 +1,4 @@
-import {SubCategoryModel} from "./sub-category.model";
+import {SubCategoryModel} from './sub-category.model';
 
 export class RulesetModel {
   category: string;

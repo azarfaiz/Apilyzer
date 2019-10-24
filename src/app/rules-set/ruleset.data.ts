@@ -1,6 +1,6 @@
-import {RulesetModel} from "../model/ruleset.model";
+import {RulesetModel} from '../model/ruleset.model';
 
-export const ruleSet : RulesetModel[] = [
+export let ruleSet: RulesetModel[] = [
   {
     category: 'API Standard',
     score: 60,

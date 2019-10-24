@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {SubCategoryModel} from "../model/sub-category.model";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {SubCategoryModel} from '../model/sub-category.model';
 
 @Component({
   selector: 'app-sub-category',
@@ -8,11 +8,16 @@ import {SubCategoryModel} from "../model/sub-category.model";
 })
 export class SubCategoryComponent implements OnInit {
 
-  @Input() subCategory : SubCategoryModel;
+  @Input() subCategory: SubCategoryModel;
+  @Output() fixed = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  onFixed($event: any) {
+    this.fixed.emit($event);
+  }
 }

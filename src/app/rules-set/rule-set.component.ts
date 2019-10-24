@@ -1,6 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {RulesetModel} from "../model/ruleset.model";
-import {IssuesModel} from "../model/issues.model";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {RulesetModel} from '../model/ruleset.model';
 
 @Component({
   selector: 'app-rule-set',
@@ -10,6 +9,7 @@ import {IssuesModel} from "../model/issues.model";
 export class RuleSetComponent implements OnInit {
 
   @Input() ruleSet: RulesetModel;
+  @Output() fixed = new EventEmitter();
 
   constructor() {
   }
@@ -17,4 +17,8 @@ export class RuleSetComponent implements OnInit {
   ngOnInit() {
   }
 
+  onFixed($event: any) {
+    this.ruleSet.score += $event;
+    this.fixed.emit(this.ruleSet);
+  }
 }
