@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {RulesetModel} from "../model/ruleset.model";
-import {ruleSet} from "../rules-set/ruleset.data";
+import {RulesetModel} from '../model/ruleset.model';
 
 @Component({
   selector: 'app-charts',
