@@ -9,7 +9,7 @@ import {RulesetModel} from '../model/ruleset.model';
 export class RuleSetComponent implements OnInit {
 
   @Input() ruleSet: RulesetModel;
-  @Output() fixed = new EventEmitter();
+  @Output() fixed = new EventEmitter<RulesetModel>();
 
   constructor() {
   }
