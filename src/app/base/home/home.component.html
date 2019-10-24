@@ -2,8 +2,8 @@
   <h1 class="font-weight-light">APILyzer</h1>
   <p>Get the complete analysis of your API in one place</p>
   <div class="fileUploadDiv d-flex align-items-center justify-content-around">
-    <input type="text" #uploadInput class="uploadInput" readonly="true" placeholder="Upload your API definition">
+    <input type="text" class="uploadInput" readonly="true" placeholder="Upload your API definition" [(ngModel)]="value">
     <input type="file" #fileInput id="file-upload">
-    <button class="btn uploadButton btn-link"><label for="file-upload" class="m-0 text-primary">UPLOAD</label></button>
+    <button class="btn uploadButton btn-link"><label for="file-upload" class="m-0 text-primary cursor-pointer">UPLOAD</label></button>
   </div>
 </div>
