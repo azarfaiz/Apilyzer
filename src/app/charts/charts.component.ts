@@ -9,10 +9,10 @@ import {ruleSet} from "../rules-set/ruleset.data";
 })
 export class ChartsComponent implements OnInit {
 
-  rules : RulesetModel[];
+  rules: RulesetModel[];
 
   constructor() {
-    this.rules = ruleSet;
+    // this.rules = ruleSet;
   }
 
   ngOnInit() {
