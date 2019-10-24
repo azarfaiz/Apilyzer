@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,13 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('fileInput') fileInput: ElementRef;
 
+  constructor() { }
   ngOnInit() {
   }
 
+  @HostListener('change', ['$event.target.files']) emitFiles(fileList: FileList) {
+    window.alert('working...');
+  }
 }
