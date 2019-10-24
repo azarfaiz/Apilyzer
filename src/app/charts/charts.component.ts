@@ -10,7 +10,7 @@ import {RulesetData} from '../rules-set/ruleset.data';
 export class ChartsComponent implements OnInit, OnChanges {
 
   rules: RulesetModel[];
-  hide= false;
+  hide = false;
 
   constructor() {
     this.rules = new RulesetData().ruleSet;

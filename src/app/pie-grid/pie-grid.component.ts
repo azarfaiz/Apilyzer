@@ -13,11 +13,29 @@ export class PieGridComponent implements OnInit {
 
   data: NameValueModel[] = [];
 
+  colorScheme = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+  };
+
   constructor() {
   }
 
   ngOnInit() {
     this.generateData();
+
+    if (this.value < 50) {
+      this.colorScheme = {
+        domain: ['#A10A28']
+      };
+    } else if (this.value >= 50 && this.value < 80) {
+      this.colorScheme = {
+        domain: ['#ffb300']
+      };
+    } else if (this.value >= 80) {
+      this.colorScheme = {
+        domain: ['#5AA454']
+      };
+    }
   }
 
   private generateData() {
