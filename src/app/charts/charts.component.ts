@@ -10,6 +10,7 @@ import {ruleSet} from "../rules-set/ruleset.data";
 export class ChartsComponent implements OnInit {
 
   rules: RulesetModel[];
+  standardScore: number;
 
   constructor() {
     this.rules = ruleSet;
