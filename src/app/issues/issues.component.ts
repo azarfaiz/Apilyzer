@@ -12,6 +12,7 @@ export class IssuesComponent implements OnInit {
   @Output() fixed = new EventEmitter();
 
   isCollapsed = true;
+  disabled = false;
 
   constructor() {
   }
@@ -21,5 +22,6 @@ export class IssuesComponent implements OnInit {
 
   onFix() {
     this.fixed.emit(this.issues.impact);
+    this.disabled = true;
   }
 }
