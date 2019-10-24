@@ -21,4 +21,8 @@ input {
   display: none;
 }
 
+.border-radius-50 {
+  border-radius: 50px;
+}
+
 text[ngx-charts-count-up]:not(.percent-label) { display: none; }

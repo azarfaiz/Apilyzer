@@ -1,5 +1,13 @@
-<div class="container">
+<div class="container shadow position-relative">
   <h2 class="font-weight-light pt-5 text-center"> Analysis Report </h2>
+
+  <div class="position-absolute options">
+    <button class="btn btn-sm btn-warning border-radius-50 float-right px-3"> <i class="fas fa-file-export"></i>
+      &nbsp; &nbsp;Download Plugin</button>
+    <button class="btn btn-sm btn-success border-radius-50 float-right px-3 mr-3"> <i class="fas fa-file-download"></i>
+      &nbsp; &nbsp;Download Definition</button>
+  </div>
+
   <div class="row chart-space">
     <div class="col-3" *ngFor="let rule of rules">
       <app-pie-grid [name]="rule['category']" [value]="rule['score']"></app-pie-grid>
