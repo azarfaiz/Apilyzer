@@ -7,12 +7,13 @@ import {HeaderComponent} from './base/header/header.component';
 import {FooterComponent} from './base/footer/footer.component';
 import {HomeComponent} from './base/home/home.component';
 import {ChartsComponent} from './charts/charts.component';
-import {GaugeModule} from '@swimlane/ngx-charts';
+import {GaugeModule, NgxChartsModule} from '@swimlane/ngx-charts';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RuleSetComponent} from './rules-set/rule-set.component';
 import {CollapseModule} from 'ngx-bootstrap';
 import {RuleComponent} from './rule/rule.component';
 import {FormsModule} from '@angular/forms';
+import { PieGridComponent } from './pie-grid/pie-grid.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +24,12 @@ import {FormsModule} from '@angular/forms';
     ChartsComponent,
     RuleSetComponent,
     RuleComponent,
+    PieGridComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GaugeModule,
+    NgxChartsModule,
     FormsModule,
     BrowserAnimationsModule,
     CollapseModule

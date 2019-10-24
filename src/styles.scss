@@ -13,3 +13,12 @@ body {
 input {
   color: #666
 }
+
+.pie-grid-item:nth-child(1) {
+  display: block;
+}
+.pie-grid-item {
+  display: none;
+}
+
+text[ngx-charts-count-up]:not(.percent-label) { display: none; }
