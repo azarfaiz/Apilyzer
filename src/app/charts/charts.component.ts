@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {RulesetModel} from '../model/ruleset.model';
+import {ruleSet} from "../rules-set/ruleset.data";
 
 @Component({
   selector: 'app-charts',
@@ -11,7 +12,7 @@ export class ChartsComponent implements OnInit {
   rules: RulesetModel[];
 
   constructor() {
-    // this.rules = ruleSet;
+    this.rules = ruleSet;
   }
 
   ngOnInit() {

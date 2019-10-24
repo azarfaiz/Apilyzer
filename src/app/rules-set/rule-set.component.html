@@ -2,7 +2,7 @@
   <h4>{{ ruleSet.category }}</h4>
   <div class="row">
     <div class="col-10" >
-      <app-rule *ngFor="let issue of ruleSet.issues" [issue]="issue"></app-rule>
+      <app-sub-category *ngFor="let subCat of ruleSet.subCategory" [subCategory]="subCat"></app-sub-category>
     </div>
   </div>
 </section>

@@ -1,0 +1,5 @@
+<section>
+  <h6> {{ subCategory.name }} </h6>
+  <app-issues *ngFor="let issue of subCategory.issues" [issues]="issue"></app-issues>
+
+</section>

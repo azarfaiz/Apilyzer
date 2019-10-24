@@ -1,4 +1,6 @@
-export const ruleSet = [
+import {RulesetModel} from "../model/ruleset.model";
+
+export const ruleSet : RulesetModel[] = [
   {
     category: 'API Standard',
     score: 60,
@@ -74,6 +76,7 @@ export const ruleSet = [
         name: 'Security sub category 1',
         issues: [
           {
+            summary: 'test',
             description: 'The global security field of the API has not been defined. This field specifies' +
               ' if your API requires the API consumer to authenticate to use the API.',
             remedy: 'First, define the securityDefinitions or securitySchemes field on the global' +
@@ -82,6 +85,7 @@ export const ruleSet = [
             impact: 20
           },
           {
+            summary: 'test',
             description: 'Some text to be displayed',
             remedy: 'Some text to be displayed',
             severity: 'low',
@@ -93,6 +97,7 @@ export const ruleSet = [
         name: 'Security sub category 2',
         issues: [
           {
+            summary: 'test',
             description: 'The global security field of the API has not been defined. This field specifies' +
               ' if your API requires the API consumer to authenticate to use the API.',
             remedy: 'First, define the securityDefinitions or securitySchemes field on the global' +

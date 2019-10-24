@@ -3,14 +3,14 @@
      [attr.aria-expanded]="!isCollapsed"
      aria-controls="collapseBasic">
     <div class="card card-header font-weight-bold">
-      {{ issue.summary }}
+      {{ issues.summary }}
     </div>
   </a>
   <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
     <div class="card card-body">
-      <p class="card-text">{{ issue.description }} </p>
+      <p class="card-text">{{ issues.description }} </p>
       <h6 style="text-decoration: underline">REMEDY:</h6>
-      <p class="card-text">{{ issue.remedy }} </p>
+      <p class="card-text">{{ issues.remedy }} </p>
     </div>
   </div>
   <br>

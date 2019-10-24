@@ -11,8 +11,9 @@ import {GaugeModule} from '@swimlane/ngx-charts';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RuleSetComponent} from './rules-set/rule-set.component';
 import {CollapseModule} from 'ngx-bootstrap';
-import {RuleComponent} from './rule/rule.component';
+import {SubCategoryComponent} from './sub-category/sub-category.component';
 import {FormsModule} from '@angular/forms';
+import { IssuesComponent } from './issues/issues.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {FormsModule} from '@angular/forms';
     HomeComponent,
     ChartsComponent,
     RuleSetComponent,
-    RuleComponent,
+    SubCategoryComponent,
+    IssuesComponent,
   ],
   imports: [
     BrowserModule,
