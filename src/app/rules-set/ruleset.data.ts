@@ -59,11 +59,22 @@ export const ruleSet = [
   {
     category: 'Security',
     score: 50,
+    subCategory: [{
+      summary: 'Description not found',
+      issues: [
+        {
+          description: 'The global security field of the API has not been defined. This field specifies' +
+            ' if your API requires the API consumer to authenticate to use the API.',
+          remedy: 'First, define the securityDefinitions or securitySchemes field on the global' +
+            ' level, and list the authentication methods that you plan to use.',
+          severity: 'high',
+          impact: 25
+        }
+      ]
+    }],
     issues: [
       {
-        summary: 'The security section is undefined',
-        description: 'The global security field of the API has not been defined. This field specifies if your API requires the API consumer to authenticate to use the API.',
-        remedy: 'First, define the securityDefinitions or securitySchemes field on the global level, and list the authentication methods that you plan to use.'
+        summary: 'The security section is undefined'
       },
       {
         summary: 'Hardcoded Auth information',
