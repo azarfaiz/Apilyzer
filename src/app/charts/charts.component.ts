@@ -30,7 +30,12 @@ export class ChartsComponent implements OnInit, OnChanges {
     this.hide = true;
     setTimeout(() => this.hide = false, 1);
   }
+
   ngOnChanges(changes: SimpleChanges): void {
     window.alert('...');
+  }
+
+  download() {
+    window.open('assets/download.json', '_blank');
   }
 }

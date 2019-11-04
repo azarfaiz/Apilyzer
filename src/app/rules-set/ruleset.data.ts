@@ -107,7 +107,7 @@ export class RulesetData {
       score: 60,
       subCategory: [
         {
-          name: 'Performance Sub 1',
+          name: 'Response Time',
           issues: [
             {
               summary: 'Response time validation',
@@ -119,7 +119,7 @@ export class RulesetData {
           ]
         },
         {
-          name: 'Performance sub category 2',
+          name: 'Availability',
           issues: [
             {
               summary: 'Server availability',
