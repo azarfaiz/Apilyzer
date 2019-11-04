@@ -1,6 +1,6 @@
 export class IssuesModel {
-  summary : string;
-  description : string;
+  summary: string;
+  description: string;
   remedy ?: string;
   severity: string;
   impact: number;

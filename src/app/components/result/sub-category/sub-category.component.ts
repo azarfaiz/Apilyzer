@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {SubCategoryModel} from '../model/sub-category.model';
+import {SubCategoryModel} from '../../../model/sub-category.model';
 
 @Component({
   selector: 'app-sub-category',

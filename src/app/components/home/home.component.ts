@@ -1,5 +1,5 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
-import {Route, Router} from '@angular/router';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     }, 1500);
 
     setTimeout(() => {
-      this.router.navigate(['charts']);
+      this.router.navigate(['result']);
     }, 3000);
   }
 }

@@ -1,15 +1,15 @@
 import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {RulesetModel} from '../model/ruleset.model';
-import {RulesetData} from '../rules-set/ruleset.data';
+import {CategoryModel} from '../../model/category.model';
+import {RulesetData} from './rules-set/ruleset.data';
 
 @Component({
-  selector: 'app-charts',
-  templateUrl: './charts.component.html',
-  styleUrls: ['./charts.component.scss']
+  selector: 'app-result',
+  templateUrl: './result.component.html',
+  styleUrls: ['./result.component.scss']
 })
-export class ChartsComponent implements OnInit, OnChanges {
+export class ResultComponent implements OnInit, OnChanges {
 
-  rules: RulesetModel[];
+  rules: CategoryModel[];
   hide = false;
 
   constructor() {
@@ -20,7 +20,7 @@ export class ChartsComponent implements OnInit, OnChanges {
 
   }
 
-  updateScore($event: RulesetModel) {
+  updateScore($event: CategoryModel) {
     const rulesetModel = this.rules.find(v => v.category === $event.category);
     rulesetModel.score = $event.score;
     this.reload();

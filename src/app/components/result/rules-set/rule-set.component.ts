@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {RulesetModel} from '../model/ruleset.model';
+import {CategoryModel} from '../../../model/category.model';
 
 @Component({
   selector: 'app-rule-set',
@@ -8,8 +8,8 @@ import {RulesetModel} from '../model/ruleset.model';
 })
 export class RuleSetComponent implements OnInit {
 
-  @Input() ruleSet: RulesetModel;
-  @Output() fixed = new EventEmitter<RulesetModel>();
+  @Input() ruleSet: CategoryModel;
+  @Output() fixed = new EventEmitter<CategoryModel>();
 
   constructor() {
   }

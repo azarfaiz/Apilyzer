@@ -1,9 +1,12 @@
 <div class="contentHeight">
-  <h1 class="font-weight-light">APILyzer</h1>
+  <h1 class="font-weight-light"><span style="color: #FF4200">API</span>Lyzer</h1>
   <p>Get the complete analysis of your API in one place</p>
   <div class="fileUploadDiv d-flex align-items-center justify-content-around">
-    <input type="text" class="uploadInput" readonly="true" placeholder="Upload your Open API 3.0 definition" [(ngModel)]="value">
+    <input type="text" class="uploadInput" readonly placeholder="Upload your Open API 3.0 definition" [(ngModel)]="value">
     <input type="file" #fileInput id="file-upload">
     <button class="btn uploadButton btn-link"><label for="file-upload" class="m-0 text-primary cursor-pointer">UPLOAD</label></button>
+  </div>
+  <div>
+    <button type="button" class="btn btn-link"><small>View analysis history</small></button>
   </div>
 </div>

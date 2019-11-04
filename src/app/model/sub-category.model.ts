@@ -1,6 +1,6 @@
-import {IssuesModel} from "./issues.model";
+import {IssuesModel} from './issues.model';
 
 export class SubCategoryModel {
   name: string;
-  issues: IssuesModel[]
+  issues: IssuesModel[];
 }
