@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {NameValueModel} from '../model/name.value.model';
+import {NameValueModel} from '../../model/name.value.model';
 
 @Component({
   selector: 'app-pie-grid',

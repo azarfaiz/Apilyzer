@@ -14,8 +14,9 @@ import {CollapseModule} from 'ngx-bootstrap';
 import {SubCategoryComponent} from './components/result/sub-category/sub-category.component';
 import {FormsModule} from '@angular/forms';
 import {IssuesComponent} from './components/result/issues/issues.component';
-import {PieGridComponent} from './pie-grid/pie-grid.component';
+import {PieGridComponent} from './components/pie-grid/pie-grid.component';
 import { HistoryComponent } from './components/history/history.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HistoryComponent } from './components/history/history.component';
     NgxChartsModule,
     FormsModule,
     BrowserAnimationsModule,
-    CollapseModule
+    CollapseModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
