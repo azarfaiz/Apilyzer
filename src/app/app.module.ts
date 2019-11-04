@@ -15,6 +15,7 @@ import {SubCategoryComponent} from './components/result/sub-category/sub-categor
 import {FormsModule} from '@angular/forms';
 import {IssuesComponent} from './components/result/issues/issues.component';
 import {PieGridComponent} from './pie-grid/pie-grid.component';
+import { HistoryComponent } from './components/history/history.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {PieGridComponent} from './pie-grid/pie-grid.component';
     RuleSetComponent,
     SubCategoryComponent,
     IssuesComponent,
-    PieGridComponent
+    PieGridComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

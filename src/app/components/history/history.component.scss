@@ -1,0 +1,15 @@
+.analyze-api {
+  left: 20px;
+  top: 50px;
+}
+
+.score-grid {
+  position: absolute;
+  left: -95px;
+}
+
+.score-grid + div {
+  position: absolute;
+  left: 120px;
+  width: 75%;
+}

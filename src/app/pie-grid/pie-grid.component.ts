@@ -10,6 +10,8 @@ export class PieGridComponent implements OnInit {
 
   @Input() name: string;
   @Input() value: number;
+  @Input() width = 390;
+  @Input() height = 390;
 
   data: NameValueModel[] = [];
 
