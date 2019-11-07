@@ -1,5 +1,5 @@
 <section>
   <h6 class="font-weight-normal text-monospace text-black-50" > {{ subCategory.name }} </h6>
-  <app-issues *ngFor="let issue of subCategory.issues" [issues]="issue" (fixed)="onFixed($event)"></app-issues>
+  <app-issue *ngFor="let issue of subCategory.issues" [issue]="issue" (fixed)="onFixed($event)"></app-issue>
 
 </section>

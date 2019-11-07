@@ -5,7 +5,7 @@
           <a (click)="isCollapsed = !isCollapsed"
              [attr.aria-expanded]="!isCollapsed"
              aria-controls="collapseBasic">
-          {{ issues.summary }}
+          {{ issue.summary }}
           </a>
         </div>
       </div>
@@ -17,9 +17,9 @@
 
   <div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
     <div class="card card-body">
-      <p class="card-text">{{ issues.description }} </p>
+      <p class="card-text">{{ issue.description }} </p>
       <h6 style="text-decoration: underline">REMEDY:</h6>
-      <p class="card-text">{{ issues.remedy }} </p>
+      <p class="card-text">{{ issue.remedy }} </p>
     </div>
   </div>
   <br>

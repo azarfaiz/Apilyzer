@@ -13,7 +13,7 @@ import {RuleSetComponent} from './components/result/rules-set/rule-set.component
 import {CollapseModule} from 'ngx-bootstrap';
 import {SubCategoryComponent} from './components/result/sub-category/sub-category.component';
 import {FormsModule} from '@angular/forms';
-import {IssuesComponent} from './components/result/issues/issues.component';
+import {IssueComponent} from './components/result/issues/issue.component';
 import {PieGridComponent} from './components/pie-grid/pie-grid.component';
 import {HistoryComponent} from './components/history/history.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
@@ -30,7 +30,7 @@ import {NamePipe} from './name.pipe';
     ResultComponent,
     RuleSetComponent,
     SubCategoryComponent,
-    IssuesComponent,
+    IssueComponent,
     PieGridComponent,
     HistoryComponent,
     NamePipe
