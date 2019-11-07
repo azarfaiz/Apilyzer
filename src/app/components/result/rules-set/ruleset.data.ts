@@ -3,7 +3,7 @@ import {CategoryModel} from '../../../model/category.model';
 export class RulesetData {
   ruleSet: CategoryModel[] = [
     {
-      category: 'API Standard',
+      name: 'API Standard',
       score: 70,
       subCategory: [
         {
@@ -41,7 +41,7 @@ export class RulesetData {
       ]
     },
     {
-      category: 'Ease of Use',
+      name: 'Ease of Use',
       score: 80,
       subCategory: [
         {
@@ -71,7 +71,7 @@ export class RulesetData {
       ]
     },
     {
-      category: 'Security',
+      name: 'Security',
       score: 45,
       subCategory: [
         {
@@ -103,7 +103,7 @@ export class RulesetData {
       ]
     },
     {
-      category: 'Performance',
+      name: 'Performance',
       score: 60,
       subCategory: [
         {

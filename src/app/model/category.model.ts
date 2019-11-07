@@ -1,7 +1,7 @@
 import {SubCategoryModel} from './sub-category.model';
 
 export class CategoryModel {
-  category: string;
+  name: string;
   score: number;
   subCategory: SubCategoryModel[];
 }

@@ -1,5 +1,5 @@
 <section>
-  <h4 class="font-weight-normal">{{ ruleSet.category }}</h4>
+  <h4 class="font-weight-normal">{{ ruleSet.name }}</h4>
   <hr>
   <app-sub-category *ngFor="let subCat of ruleSet.subCategory" [subCategory]="subCat" (fixed)="onFixed($event)"></app-sub-category>
 </section>

@@ -1,6 +1,7 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 import {AppService} from '../../service/app.service';
+import {EvaluationResultModel} from '../../model/evaluation.result.model';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,8 @@ export class HomeComponent implements OnInit {
 
   @ViewChild('fileInput', { static: true }) fileInput: ElementRef;
   value = '';
+
+  result: EvaluationResultModel;
 
   constructor(private router: Router, private service: AppService) {
   }
@@ -28,13 +31,10 @@ export class HomeComponent implements OnInit {
     }, 1500);
 
     this.service.evaluate(file).subscribe(
-      () => {
-        this.router.navigate(['result']);
+      (response) => {
+        this.result = response;
       }
     );
-/*
-    setTimeout(() => {
-      this.router.navigate(['result']);
-    }, 3000);*/
+
   }
 }

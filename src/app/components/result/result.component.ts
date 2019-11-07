@@ -1,6 +1,5 @@
-import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {CategoryModel} from '../../model/category.model';
-import {RulesetData} from './rules-set/ruleset.data';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {EvaluationResultModel} from '../../model/evaluation.result.model';
 
 @Component({
   selector: 'app-result',
@@ -9,33 +8,22 @@ import {RulesetData} from './rules-set/ruleset.data';
 })
 export class ResultComponent implements OnInit, OnChanges {
 
-  rules: CategoryModel[];
   hide = false;
 
+  @Input() result: EvaluationResultModel;
+
   constructor() {
-    this.rules = new RulesetData().ruleSet;
   }
 
   ngOnInit() {
 
   }
 
-  updateScore($event: CategoryModel) {
-    const rulesetModel = this.rules.find(v => v.category === $event.category);
-    rulesetModel.score = $event.score;
-    this.reload();
-  }
 
-  reload() {
-    this.hide = true;
-    setTimeout(() => this.hide = false, 1);
-  }
 
   ngOnChanges(changes: SimpleChanges): void {
-    window.alert('...');
+
   }
 
-  download() {
-    window.open('assets/download.json', '_blank');
-  }
+
 }

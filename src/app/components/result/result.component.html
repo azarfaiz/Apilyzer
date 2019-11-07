@@ -12,14 +12,14 @@
     <button
       type="button"
       class="btn btn-sm btn-success border-radius-50 float-right px-3 mr-3"
-      (click)="download()"
+
     > <i class="fas fa-file-download"></i>
       &nbsp;Download Definition</button>
   </div>
 
   <div class="row chart-space" *ngIf="!hide">
-    <div class="col-3" *ngFor="let rule of rules">
-      <app-pie-grid [name]="rule.category" [value]="rule.score" ></app-pie-grid>
+    <div class="col-3" *ngFor="let rule of result.categories">
+      <app-pie-grid [name]="rule.name" [value]="rule.score" ></app-pie-grid>
     </div>
   </div>
 
@@ -32,9 +32,9 @@
     <div class="mr-3">  Greater than 79% </div>
   </div>
 
-  <app-rule-set
+ <!-- <app-rule-set
     *ngFor="let rule of rules"
     [ruleSet]="rule" (fixed)="updateScore($event)">
-  </app-rule-set>
+  </app-rule-set>-->
 
 </div>
