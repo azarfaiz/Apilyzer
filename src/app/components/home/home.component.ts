@@ -37,4 +37,8 @@ export class HomeComponent implements OnInit {
     );
 
   }
+
+  onNewAnalyze() {
+    this.result = null;
+  }
 }

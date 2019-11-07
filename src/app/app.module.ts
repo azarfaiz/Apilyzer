@@ -19,6 +19,7 @@ import {HistoryComponent} from './components/history/history.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AppService} from './service/app.service';
 import {RequestInterceptor} from './interceptors/request-interceptor.service';
+import {NamePipe} from './name.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {RequestInterceptor} from './interceptors/request-interceptor.service';
     SubCategoryComponent,
     IssuesComponent,
     PieGridComponent,
-    HistoryComponent
+    HistoryComponent,
+    NamePipe
   ],
   imports: [
     BrowserModule,

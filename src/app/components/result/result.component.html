@@ -1,7 +1,7 @@
 <div class="container shadow position-relative min-vh-100">
 
   <div class="position-absolute analyze-api">
-    <a href="#" routerLink="/"> <i class="fas fa-arrow-left"></i> Analyze another API </a>
+    <a href="#" (click)="analyzeAnotherAPI()"> <i class="fas fa-arrow-left"></i> Analyze another API </a>
   </div>
   <h2 class="font-weight-light pt-5 text-center"> Analysis Report </h2>
 
@@ -19,7 +19,7 @@
 
   <div class="row chart-space" *ngIf="!hide">
     <div class="col-3" *ngFor="let rule of result.categories">
-      <app-pie-grid [name]="rule.name" [value]="rule.score" ></app-pie-grid>
+      <app-pie-grid [name]="rule.name | simpleName" [value]="rule.score" ></app-pie-grid>
     </div>
   </div>
 

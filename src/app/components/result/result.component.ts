@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {EvaluationResultModel} from '../../model/evaluation.result.model';
 
 @Component({
@@ -11,6 +11,7 @@ export class ResultComponent implements OnInit, OnChanges {
   hide = false;
 
   @Input() result: EvaluationResultModel;
+  @Output() onNewAnalyze = new EventEmitter();
 
   constructor() {
   }
@@ -26,4 +27,7 @@ export class ResultComponent implements OnInit, OnChanges {
   }
 
 
+  analyzeAnotherAPI() {
+    this.onNewAnalyze.emit();
+  }
 }
