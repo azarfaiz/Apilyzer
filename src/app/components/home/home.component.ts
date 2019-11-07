@@ -1,5 +1,6 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
+import {AppService} from '../../service/app.service';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,10 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('fileInput') fileInput: ElementRef;
+  @ViewChild('fileInput', { static: true }) fileInput: ElementRef;
   value = '';
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private service: AppService) {
   }
 
   ngOnInit() {
@@ -26,8 +27,14 @@ export class HomeComponent implements OnInit {
       this.value = 'Processing the Open API ... ';
     }, 1500);
 
+    this.service.evaluate(file).subscribe(
+      () => {
+        this.router.navigate(['result']);
+      }
+    );
+/*
     setTimeout(() => {
       this.router.navigate(['result']);
-    }, 3000);
+    }, 3000);*/
   }
 }

@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 @Injectable()
 export class AppService {
 
-  baseUrl = '/rest/api/';
+  baseUrl = '/apilyzer/rest/';
 
   constructor(private client: HttpClient) {
   }
