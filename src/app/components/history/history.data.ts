@@ -1,6 +1,4 @@
-import {ResultModel} from '../../model/result.model';
-
-export const sampleHistoryData: ResultModel[] = [
+export const sampleHistoryData: any[] = [
   {
     id: 'f9213218-24c5-4bec-b702-d6a78cb2f1be',
     name: 'Ferrari Logistics API',

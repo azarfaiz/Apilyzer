@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {sampleHistoryData} from './history.data';
+import {EvaluationResultModel} from '../../model/evaluation.result.model';
+import {AppService} from '../../service/app.service';
 
 @Component({
   selector: 'app-history',
@@ -8,12 +9,14 @@ import {sampleHistoryData} from './history.data';
 })
 export class HistoryComponent implements OnInit {
 
-  data = sampleHistoryData;
+  data: EvaluationResultModel[] = [];
 
-  constructor() {
+  constructor(private service: AppService) {
   }
 
   ngOnInit() {
+    this.service.getAllHistory().subscribe(
+      (response) => this.data = response
+    );
   }
-
 }
