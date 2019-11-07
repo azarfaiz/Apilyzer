@@ -6,5 +6,6 @@ export class EvaluationResultModel {
   score: number;
   apiName: string;
   categories: CategoryModel[];
+  evaluationDate: Date;
 
 }

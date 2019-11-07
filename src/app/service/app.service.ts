@@ -23,4 +23,8 @@ export class AppService {
   fixIssue(id: string, payload: any): Observable<any> {
     return this.client.post(this.baseUrl + 'issue/' + id + '/fix', payload);
   }
+
+  download(id: string) {
+    window.open(this.baseUrl + id + '/report', '_blank');
+  }
 }

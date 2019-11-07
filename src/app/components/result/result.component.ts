@@ -1,34 +1,32 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {EvaluationResultModel} from '../../model/evaluation.result.model';
-import {CategoryModel} from '../../model/category.model';
+import {AppService} from '../../service/app.service';
 
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
   styleUrls: ['./result.component.scss']
 })
-export class ResultComponent implements OnInit, OnChanges {
+export class ResultComponent implements OnInit {
 
   hide = false;
 
   @Input() result: EvaluationResultModel;
   @Output() onNewAnalyze = new EventEmitter();
 
-  constructor() {
+  constructor(private service: AppService) {
   }
 
   ngOnInit() {
 
   }
 
-
-
-  ngOnChanges(changes: SimpleChanges): void {
-
+  download() {
+    this.service.download(this.result.id);
   }
 
-
-  analyzeAnotherAPI() {
+  analyzeAnotherAPI($event) {
+    $event.preventDefault();
     this.onNewAnalyze.emit();
   }
 

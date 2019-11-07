@@ -1,4 +1,4 @@
-<div class="container shadow position-relative min-vh-100">
+<div class="container shadow position-relative min-vh-100" *ngIf="!selectedEvaluation">
   <div class="position-absolute analyze-api">
     <a href="#" routerLink="/"> <i class="fas fa-arrow-left"></i> Analyze another API </a>
   </div>
@@ -10,12 +10,16 @@
       <div class="d-inline-flex position-relative" style="max-height: 200px; width: inherit;">
         <app-pie-grid name="API Score" [value]="result.score" width="300" height="300" class="score-grid"></app-pie-grid>
         <div class="card-text-block score mt-4">
-          <span> <a href="#"> {{result.apiName}} </a> </span>
+          <span> <a href="#" (click)="select(result, $event)"> {{result.apiName}} </a> </span>
           <div>
-            <small class="text-black-50">{{result.evaluatedOn | date }}</small>
+            <small class="text-black-50">{{result.evaluationDate | date }}</small>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<ng-container *ngIf="selectedEvaluation">
+  <app-result [result]="selectedEvaluation"></app-result>
+</ng-container>

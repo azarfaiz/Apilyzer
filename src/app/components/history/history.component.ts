@@ -9,6 +9,7 @@ import {AppService} from '../../service/app.service';
 })
 export class HistoryComponent implements OnInit {
 
+  selectedEvaluation: EvaluationResultModel;
   data: EvaluationResultModel[] = [];
 
   constructor(private service: AppService) {
@@ -18,5 +19,10 @@ export class HistoryComponent implements OnInit {
     this.service.getAllHistory().subscribe(
       (response) => this.data = response
     );
+  }
+
+  select(result: EvaluationResultModel, $event: any) {
+    $event.preventDefault();
+    this.selectedEvaluation = result;
   }
 }

@@ -1,14 +1,14 @@
 <div class="container shadow position-relative min-vh-100">
 
   <div class="position-absolute analyze-api">
-    <a href="#" (click)="analyzeAnotherAPI()"> <i class="fas fa-arrow-left"></i> Analyze another API </a>
+    <a (click)="analyzeAnotherAPI($event)" href="#"> <i class="fas fa-arrow-left"></i> Analyze another API </a>
   </div>
   <h2 class="font-weight-light pt-5 text-center"> Analysis Report </h2>
 
 
   <div class="position-absolute options">
-    <button type="button" class="btn btn-sm btn-warning border-radius-50 float-right px-3"> <i class="fas fa-file-export"></i>
-      &nbsp; Embed APILyzer</button>
+    <button type="button" class="btn btn-sm btn-warning border-radius-50 float-right px-3" (click)="download()"> <i class="fas fa-file-export"></i>
+      &nbsp; Download Report</button>
     <button
       type="button"
       class="btn btn-sm btn-success border-radius-50 float-right px-3 mr-3"
