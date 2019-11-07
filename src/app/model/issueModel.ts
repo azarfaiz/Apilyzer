@@ -4,5 +4,6 @@ export class IssueModel {
   summary: string;
   description: string;
   remedy ?: string;
+  errorInfo: string;
   severity: string;
 }

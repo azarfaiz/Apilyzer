@@ -5,9 +5,9 @@
   <h2 class="font-weight-light pt-5 text-center"> Analysis History </h2>
 
   <hr>
-  <div class="row">
-    <div class="col-3 col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let result of data" style="height: 150px;">
-      <div class="d-inline-flex position-relative" style="max-height: 200px; width: inherit;">
+  <div class="row pl-3">
+    <div class="col-4 col-sm-12 col-md-6 col-lg-4 box-wrapper" [ngClass]="getClassByScore(result.score)" *ngFor="let result of data" style="height: 150px;">
+      <div class="d-inline-flex position-relative shadow-sm" style="max-height: 200px; width: inherit;">
         <app-pie-grid name="API Score" [value]="result.score" width="300" height="300" class="score-grid"></app-pie-grid>
         <div class="card-text-block score mt-4">
           <span> <a href="#" (click)="select(result, $event)"> {{result.apiName}} </a> </span>

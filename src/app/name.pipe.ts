@@ -3,13 +3,15 @@ import {Pipe, PipeTransform} from '@angular/core';
 @Pipe({
   name: 'simpleName'
 })
-export class NamePipe implements PipeTransform{
+export class NamePipe implements PipeTransform {
   transform(value: any, ...args: any[]): any {
-    let re = /_/gi;
+    const re = /_/gi;
     return value.toString()
       .replace(re, ' ')
       .split(' ')
-      .map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
+      .map(w => {
+        return w === 'API' ? w : w[0].toUpperCase() + w.substr(1).toLowerCase();
+      })
       .join(' ');
   }
 }

@@ -6,10 +6,43 @@
 .score-grid {
   position: absolute;
   left: -95px;
+  margin-top: -25px;
 }
 
 .score-grid + div {
   position: absolute;
   left: 120px;
   width: 75%;
+}
+
+.box-wrapper {
+  border-left: 3px solid;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-bottom: 20px;
+  width: calc(100% - 20px);
+}
+
+.box-wrapper.low {
+  border-color: #A10A28;
+}
+
+.box-wrapper.medium {
+  border-color: #ffb300;
+}
+
+.box-wrapper.high {
+  border-color: #5AA454;
+}
+
+.box-wrapper.low:hover {
+  background-color: rgba(#A10A28, 0.05);
+}
+
+.box-wrapper.medium:hover {
+  background-color: rgba(#ffb300, 0.05);
+}
+
+.box-wrapper.high:hover {
+  background-color: rgba(#5AA454, 0.05);
 }

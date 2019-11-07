@@ -5,7 +5,7 @@
           <a (click)="isCollapsed = !isCollapsed"
              [attr.aria-expanded]="!isCollapsed"
              aria-controls="collapseBasic">
-          {{ issue.summary }}
+          {{ issue.summary }} - {{ issue.errorInfo}}
           </a>
         </div>
       </div>

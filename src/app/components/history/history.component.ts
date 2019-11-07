@@ -25,4 +25,14 @@ export class HistoryComponent implements OnInit {
     $event.preventDefault();
     this.selectedEvaluation = result;
   }
+
+  getClassByScore(score: number): string {
+    if (score > 80) {
+      return 'high';
+    } else if (score >= 50 && score <= 79) {
+      return 'medium';
+    } else {
+      return 'low';
+    }
+  }
 }
