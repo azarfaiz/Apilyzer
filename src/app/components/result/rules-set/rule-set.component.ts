@@ -8,7 +8,7 @@ import {CategoryModel} from '../../../model/category.model';
 })
 export class RuleSetComponent implements OnInit {
 
-  @Input() ruleSet: CategoryModel;
+  @Input() category: CategoryModel;
   @Output() fixed = new EventEmitter<CategoryModel>();
 
   constructor() {
@@ -18,7 +18,7 @@ export class RuleSetComponent implements OnInit {
   }
 
   onFixed($event: any) {
-    this.ruleSet.score += $event;
-    this.fixed.emit(this.ruleSet);
+    this.category.score += $event;
+    this.fixed.emit(this.category);
   }
 }

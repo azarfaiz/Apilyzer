@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {EvaluationResultModel} from '../../model/evaluation.result.model';
+import {CategoryModel} from '../../model/category.model';
 
 @Component({
   selector: 'app-result',
@@ -29,5 +30,9 @@ export class ResultComponent implements OnInit, OnChanges {
 
   analyzeAnotherAPI() {
     this.onNewAnalyze.emit();
+  }
+
+  onFix($event: any) {
+
   }
 }

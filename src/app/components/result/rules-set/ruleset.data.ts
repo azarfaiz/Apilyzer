@@ -1,7 +1,5 @@
-import {CategoryModel} from '../../../model/category.model';
-
 export class RulesetData {
-  ruleSet: CategoryModel[] = [
+  ruleSet: any[] = [
     {
       name: 'API Standard',
       score: 70,

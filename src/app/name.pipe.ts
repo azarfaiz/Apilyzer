@@ -6,6 +6,10 @@ import {Pipe, PipeTransform} from '@angular/core';
 export class NamePipe implements PipeTransform{
   transform(value: any, ...args: any[]): any {
     let re = /_/gi;
-    return value.toString().toLowerCase().replace(re, ' ');
+    return value.toString()
+      .replace(re, ' ')
+      .split(' ')
+      .map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
+      .join(' ');
   }
 }

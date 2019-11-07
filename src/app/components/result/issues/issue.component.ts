@@ -21,7 +21,7 @@ export class IssueComponent implements OnInit {
   }
 
   onFix() {
-    this.fixed.emit(this.issue.impact);
+    this.fixed.emit(0);
     this.disabled = true;
   }
 }

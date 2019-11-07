@@ -32,9 +32,9 @@
     <div class="mr-3">  Greater than 79% </div>
   </div>
 
- <!-- <app-rule-set
-    *ngFor="let rule of rules"
-    [ruleSet]="rule" (fixed)="updateScore($event)">
-  </app-rule-set>-->
+ <app-rule-set
+    *ngFor="let rule of result.categories"
+    [category]="rule" (fixed)="onFix($event)">
+  </app-rule-set>
 
 </div>
