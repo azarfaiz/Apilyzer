@@ -12,7 +12,7 @@
     <button
       type="button"
       class="btn btn-sm btn-success border-radius-50 float-right px-3 mr-3"
-
+      (click)="downloadFile()"
     > <i class="fas fa-file-download"></i>
       &nbsp;Download Definition</button>
   </div>
@@ -23,13 +23,15 @@
     </div>
   </div>
 
-  <div class="border-light d-flex justify-content-center legend">
-    <div class="d-inline-block mr-2" style="height: 10px; width: 30px; margin-top: 7px; background-color: #A10A28"></div>
-    <div class="mr-3"> Less than 50% </div>
-    <div class="d-inline-block mr-2" style="height: 10px; width: 30px; margin-top: 7px; background-color: #ffb300"></div>
-    <div class="mr-3"> 50% - 79% </div>
-    <div class="d-inline-block mr-2" style="height: 10px; width: 30px; margin-top: 7px; background-color: #5AA454"></div>
-    <div class="mr-3">  Greater than 79% </div>
+  <div class="border-light d-flex justify-content-center">
+    <div class="legend">
+      <div class="d-inline-block mr-2" style="height: 10px; width: 30px; margin-top: 7px; background-color: #A10A28"></div>
+      <div class="mr-3"> 0 - 50% </div>
+      <div class="d-inline-block mr-2" style="height: 10px; width: 30px; margin-top: 7px; background-color: #ffb300"></div>
+      <div class="mr-3"> 50% - 79% </div>
+      <div class="d-inline-block mr-2" style="height: 10px; width: 30px; margin-top: 7px; background-color: #5AA454"></div>
+      <div>  80% - 100% </div>
+    </div>
   </div>
 
  <app-rule-set

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {EvaluationResultModel} from '../../model/evaluation.result.model';
 import {AppService} from '../../service/app.service';
+import {Route, Router} from '@angular/router';
 
 @Component({
   selector: 'app-history',
@@ -12,7 +13,7 @@ export class HistoryComponent implements OnInit {
   selectedEvaluation: EvaluationResultModel;
   data: EvaluationResultModel[] = [];
 
-  constructor(private service: AppService) {
+  constructor(private service: AppService, private router: Router) {
   }
 
   ngOnInit() {
@@ -34,5 +35,9 @@ export class HistoryComponent implements OnInit {
     } else {
       return 'low';
     }
+  }
+
+  onNewAnalyze() {
+    this.router.navigate(['/']);
   }
 }

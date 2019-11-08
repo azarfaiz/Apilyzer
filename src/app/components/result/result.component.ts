@@ -22,7 +22,11 @@ export class ResultComponent implements OnInit {
   }
 
   download() {
-    this.service.download(this.result.id);
+    this.service.downloadReport(this.result.id);
+  }
+
+  downloadFile() {
+    this.service.downloadFile(this.result.id);
   }
 
   analyzeAnotherAPI($event) {

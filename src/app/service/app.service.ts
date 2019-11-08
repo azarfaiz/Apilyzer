@@ -24,7 +24,11 @@ export class AppService {
     return this.client.post(this.baseUrl + 'issue/' + id + '/fix', payload);
   }
 
-  download(id: string) {
+  downloadReport(id: string) {
     window.open(this.baseUrl + id + '/report', '_blank');
+  }
+
+  downloadFile(id: string) {
+    window.open(this.baseUrl + id + '/download', '_blank');
   }
 }
