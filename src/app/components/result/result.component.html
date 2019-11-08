@@ -17,11 +17,43 @@
       &nbsp;Download Definition</button>
   </div>
 
-  <div class="row chart-space" *ngIf="!hide">
-    <div class="col-3" *ngFor="let rule of result.categories">
-      <app-pie-grid [name]="rule.name | simpleName" [value]="rule.score" ></app-pie-grid>
+  <hr style="border-width: 3px;">
+
+  <div class="container-fluid">
+    <div class="row" style="max-height: 150px;">
+      <div class="col-3" style="margin-left: -50px;">
+        <app-pie-grid [name]="'Overall'" [value]="result.score" width="300" height="300"></app-pie-grid>
+      </div>
+      <div class="col-9" style="padding-top: 50px;">
+        <div class="row">
+          <div class="col-4 text-right font-weight-bold">
+            Name
+          </div>
+          <div class="col-6">
+            {{ result.apiName }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 text-right font-weight-bold">
+            Evaluated On
+          </div>
+          <div class="col-6">
+            {{ result.evaluationDate | date }}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <hr>
+  <div class="row container-fluid">
+    <h4 class="font-weight-light justify-content-center w-100 text-center"> Score by Category</h4>
+    <div class="row chart-space" *ngIf="!hide">
+      <div class="col-3" *ngFor="let rule of result.categories">
+        <app-pie-grid [name]="rule.name | simpleName" [value]="rule.score" ></app-pie-grid>
+      </div>
+    </div>
+  </div>
+
 
   <div class="border-light d-flex justify-content-center">
     <div class="legend">

@@ -20,8 +20,8 @@ export class AppService {
     return this.client.get(this.baseUrl + 'history');
   }
 
-  fixIssue(id: string, payload: any): Observable<any> {
-    return this.client.post(this.baseUrl + 'issue/' + id + '/fix', payload);
+  fixIssue(evalId: string, id: string, payload: any): Observable<any> {
+    return this.client.post(this.baseUrl + 'evaluations/' + evalId + '/issues/' + id + '/fix', payload);
   }
 
   downloadReport(id: string) {

@@ -25,7 +25,5 @@ input {
   border-radius: 50px;
 }
 
-text {
-  font-size: 16px !important;
-}
+
 text[ngx-charts-count-up]:not(.percent-label) { display: none; }
