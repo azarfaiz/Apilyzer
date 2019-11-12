@@ -10,10 +10,14 @@ import {Route, Router} from '@angular/router';
 })
 export class HistoryComponent implements OnInit {
 
+  constructor(private service: AppService, private router: Router) {
+  }
+
   selectedEvaluation: EvaluationResultModel;
   data: EvaluationResultModel[] = [];
 
-  constructor(private service: AppService, private router: Router) {
+  static getTime(dateString: string) {
+    return dateString != null ? new Date(dateString).getTime() : 0;
   }
 
   ngOnInit() {
@@ -22,8 +26,21 @@ export class HistoryComponent implements OnInit {
 
   private init() {
     this.service.getAllHistory().subscribe(
-      (response) => this.data = response
+      (response) => {
+        this.data = response;
+        this.sortByDate();
+      }
     );
+  }
+
+
+  public sortByDate(): void {
+    this.data = this.data.sort((a: EvaluationResultModel, b: EvaluationResultModel) => {
+      return HistoryComponent.getTime(b.evaluationDate) - HistoryComponent.getTime(a.evaluationDate);
+    });
+    this.data.forEach(v => {
+      console.log(v.score + ' ' + HistoryComponent.getTime(v.evaluationDate));
+    });
   }
 
   select(result: EvaluationResultModel, $event: any) {

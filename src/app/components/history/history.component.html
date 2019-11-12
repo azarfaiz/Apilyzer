@@ -12,7 +12,7 @@
         <div class="card-text-block score mt-4">
           <span> <a href="#" (click)="select(result, $event)"> {{result.apiName}} </a> </span>
           <div>
-            <small class="text-black-50">{{result.evaluationDate | date }}</small>
+            <small class="text-black-50">{{result.evaluationDate | date: 'medium' }}</small>
           </div>
         </div>
       </div>
