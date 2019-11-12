@@ -2,7 +2,6 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {IssueModel} from '../../../model/issueModel';
 import {FormControl, FormGroup} from '@angular/forms';
 import {AppService} from '../../../service/app.service';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-issue',
@@ -20,7 +19,7 @@ export class IssueComponent implements OnInit {
   isCollapsed = true;
   issueFixed = false;
 
-  constructor(private service: AppService, private router: Router) {
+  constructor(private service: AppService) {
   }
 
   ngOnInit() {
