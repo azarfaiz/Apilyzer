@@ -45,6 +45,13 @@ export class IssueComponent implements OnInit {
       case 'MISSING_SERVER_DESC':
         this.fixForm.addControl('description', new FormControl(null));
         break;
+      case 'MISSING_SERVER_INFORMATION':
+        this.fixForm.addControl('url', new FormControl(null));
+        this.fixForm.addControl('description', new FormControl(null));
+        break;
+      case 'OPERATION_2XX_RESPONSE':
+        this.fixForm.addControl('responseStatusCode', new FormControl(null));
+        this.fixForm.addControl('description', new FormControl(null));
     }
   }
 
@@ -54,5 +61,16 @@ export class IssueComponent implements OnInit {
 
   private getControlKeys() {
     return Object.keys(this.fixForm.controls);
+  }
+
+  getPlaceHolderText(input: string) {
+    switch (input) {
+      case 'url':
+        return 'URL';
+      case 'responseStatusCode':
+        return 'Status Code';
+      default:
+        return input;
+    }
   }
 }
