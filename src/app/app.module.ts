@@ -21,6 +21,7 @@ import {AppService} from './service/app.service';
 import {RequestInterceptor} from './interceptors/request-interceptor.service';
 import {NamePipe} from './name.pipe';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
+import { RulesConfigureComponent } from './components/rules-configure/rules-configure.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
     IssueComponent,
     PieGridComponent,
     HistoryComponent,
-    NamePipe
+    NamePipe,
+    RulesConfigureComponent
   ],
   imports: [
     BrowserModule,

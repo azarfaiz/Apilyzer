@@ -31,4 +31,12 @@ export class AppService {
   downloadFile(id: string) {
     window.open(this.baseUrl + id + '/download', '_blank');
   }
+
+  getAllConfiguredRules() {
+    return this.client.get(this.baseUrl + 'rules');
+  }
+
+  updateConfiguredRules(payload: any) {
+    return this.client.post(this.baseUrl + 'rules', payload);
+  }
 }

@@ -1,0 +1,29 @@
+<div class="container shadow position-relative min-vh-100">
+
+  <div class="position-absolute analyze-api">
+    <a href="#" routerLink="/"> <i class="fas fa-arrow-left"></i> Analyze another API </a>
+  </div>
+
+  <h2 class="font-weight-light pt-5 text-center"> Configure rules </h2>
+
+  <hr>
+
+
+  <p class="text-black-50 mb-5">
+    Configure the rules to be executed during the upload of API definition
+    <button class="btn btn-sm btn-primary float-right" (click)="save()" type="submit" [disabled]="!rulesForm.dirty">
+      <i class="fas fa-save"></i> Save
+    </button>
+  </p>
+
+  <form [formGroup]="rulesForm">
+    <ng-container *ngFor="let _ of rulesForm.get('rules').controls; let i = index">
+      <label class="container">
+        <small style="font-size: 60%; vertical-align: text-top;"> {{ rules.rules[i].ruleName | simpleName }} </small>
+        <input type="checkbox" [formControl]="_">
+        <span class="checkmark"></span>
+      </label>
+    </ng-container>
+  </form>
+
+</div>
