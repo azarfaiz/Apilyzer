@@ -12,7 +12,8 @@ export class ResultComponent implements OnInit {
   hide = false;
 
   @Input() result: EvaluationResultModel;
-  @Output() onNewAnalyze = new EventEmitter();
+  @Output() newAnalyze = new EventEmitter();
+  @Output() issueFix = new EventEmitter();
 
   constructor(private service: AppService) {
   }
@@ -31,10 +32,10 @@ export class ResultComponent implements OnInit {
 
   analyzeAnotherAPI($event) {
     $event.preventDefault();
-    this.onNewAnalyze.emit();
+    this.newAnalyze.emit();
   }
 
-  onFix($event: any) {
-
+  onFix() {
+    this.issueFix.emit();
   }
 }

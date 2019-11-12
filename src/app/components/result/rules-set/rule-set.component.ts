@@ -9,6 +9,8 @@ import {CategoryModel} from '../../../model/category.model';
 export class RuleSetComponent implements OnInit {
 
   @Input() category: CategoryModel;
+  @Input() evalId: string;
+
   @Output() fixed = new EventEmitter<CategoryModel>();
 
   constructor() {

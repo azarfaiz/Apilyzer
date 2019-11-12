@@ -10,6 +10,7 @@ export class SubCategoryComponent implements OnInit {
 
   @Input() subCategory: SubCategoryModel;
   @Output() fixed = new EventEmitter();
+  @Input() evalId: string;
 
   constructor() {
   }

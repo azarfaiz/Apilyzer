@@ -21,5 +21,5 @@
 </div>
 
 <ng-container *ngIf="selectedEvaluation">
-  <app-result [result]="selectedEvaluation" (onNewAnalyze)="onNewAnalyze()"></app-result>
+  <app-result [result]="selectedEvaluation" (newAnalyze)="onNewAnalyze()" (issueFix)="refresh()"></app-result>
 </ng-container>

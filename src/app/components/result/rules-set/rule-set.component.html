@@ -1,5 +1,5 @@
 <section *ngIf="category.subCategories.length > 0">
   <h4 class="font-weight-normal">{{ category.name | simpleName}}</h4>
   <hr>
-  <app-sub-category *ngFor="let subCat of category.subCategories" [subCategory]="subCat" (fixed)="onFixed($event)"></app-sub-category>
+  <app-sub-category *ngFor="let subCat of category.subCategories" [subCategory]="subCat" (fixed)="onFixed($event)" [evalId]="evalId"></app-sub-category>
 </section>

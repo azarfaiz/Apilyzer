@@ -1,6 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {IssueModel} from '../../../model/issueModel';
 import {FormControl, FormGroup} from '@angular/forms';
+import {AppService} from '../../../service/app.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-issue',
@@ -10,25 +12,31 @@ import {FormControl, FormGroup} from '@angular/forms';
 export class IssueComponent implements OnInit {
 
   @Input() issue: IssueModel;
+  @Input() evalId: string;
   @Output() fixed = new EventEmitter();
 
   fixForm: FormGroup;
 
   isCollapsed = true;
-  disabled = false;
+  issueFixed = false;
 
-  constructor() {
+  constructor(private service: AppService, private router: Router) {
   }
 
   ngOnInit() {
     this.initializeForm();
   }
 
-  /*onFix() {
-    this.fixed.emit(0);
-    this.disabled = true;
+  onFix() {
+
+    this.service.fixIssue(this.evalId, this.issue.id, this.fixForm.value).subscribe(
+      () => {
+        this.issueFixed = true;
+        this.fixed.emit(0);
+      }
+    );
   }
-*/
+
   private initializeForm() {
     const ruleName = this.issue.name;
     this.fixForm = new FormGroup({});

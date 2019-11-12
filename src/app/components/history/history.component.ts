@@ -17,6 +17,10 @@ export class HistoryComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.init();
+  }
+
+  private init() {
     this.service.getAllHistory().subscribe(
       (response) => this.data = response
     );
@@ -39,5 +43,10 @@ export class HistoryComponent implements OnInit {
 
   onNewAnalyze() {
     this.router.navigate(['/']);
+  }
+
+  refresh() {
+    this.selectedEvaluation = null;
+    this.init();
   }
 }

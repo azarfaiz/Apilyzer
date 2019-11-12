@@ -68,7 +68,7 @@
 
  <app-rule-set
     *ngFor="let rule of result.categories"
-    [category]="rule" (fixed)="onFix($event)">
+    [category]="rule" (fixed)="onFix($event)" [evalId]="result.id">
   </app-rule-set>
 
 </div>
