@@ -12,7 +12,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RuleSetComponent} from './components/result/rules-set/rule-set.component';
 import {CollapseModule} from 'ngx-bootstrap';
 import {SubCategoryComponent} from './components/result/sub-category/sub-category.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {IssueComponent} from './components/result/issues/issue.component';
 import {PieGridComponent} from './components/pie-grid/pie-grid.component';
 import {HistoryComponent} from './components/history/history.component';
@@ -20,6 +20,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AppService} from './service/app.service';
 import {RequestInterceptor} from './interceptors/request-interceptor.service';
 import {NamePipe} from './name.pipe';
+import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -39,12 +40,14 @@ import {NamePipe} from './name.pipe';
     BrowserModule,
     AppRoutingModule,
     NgxChartsModule,
+    ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
     CollapseModule,
-    HttpClientModule
+    HttpClientModule,
+    BsDropdownModule.forRoot()
   ],
-  providers: [ AppService, { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true } ],
+  providers: [AppService, {provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
