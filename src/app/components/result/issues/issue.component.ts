@@ -29,9 +29,9 @@ export class IssueComponent implements OnInit {
   onFix() {
 
     this.service.fixIssue(this.evalId, this.issue.id, this.fixForm.value).subscribe(
-      () => {
+      (response) => {
         this.issueFixed = true;
-        this.fixed.emit(0);
+        this.fixed.emit(response);
       }
     );
   }

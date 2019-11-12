@@ -20,7 +20,6 @@ export class RuleSetComponent implements OnInit {
   }
 
   onFixed($event: any) {
-    this.category.score += $event;
-    this.fixed.emit(this.category);
+    this.fixed.emit($event);
   }
 }

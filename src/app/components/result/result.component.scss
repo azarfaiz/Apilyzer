@@ -21,3 +21,11 @@
   margin-bottom: 10px;
   display: inline-flex;
 }
+
+.overall {
+  display: none;
+}
+
+.overall:first-child {
+  display: flex;
+}

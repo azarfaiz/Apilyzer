@@ -21,7 +21,7 @@
 
   <div class="container-fluid">
     <div class="row" style="max-height: 150px;">
-      <div class="col-3" style="margin-left: -50px;">
+      <div class="col-3 overall" style="margin-left: -50px;" *ngFor="let _ of result.categories">
         <app-pie-grid [name]="'Overall'" [value]="result.score" width="300" height="300"></app-pie-grid>
       </div>
       <div class="col-9" style="padding-top: 50px;">
@@ -47,7 +47,7 @@
   <hr>
   <div class="row container-fluid">
     <h4 class="font-weight-light justify-content-center w-100 text-center"> Score by Category</h4>
-    <div class="row chart-space" *ngIf="!hide">
+    <div class="row chart-space">
       <div class="col-3" *ngFor="let rule of result.categories">
         <app-pie-grid [name]="rule.name | simpleName" [value]="rule.score" ></app-pie-grid>
       </div>

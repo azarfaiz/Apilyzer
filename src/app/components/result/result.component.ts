@@ -9,8 +9,6 @@ import {AppService} from '../../service/app.service';
 })
 export class ResultComponent implements OnInit {
 
-  hide = false;
-
   @Input() result: EvaluationResultModel;
   @Output() newAnalyze = new EventEmitter();
   @Output() issueFix = new EventEmitter();
@@ -19,7 +17,6 @@ export class ResultComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
 
   download() {
@@ -35,7 +32,7 @@ export class ResultComponent implements OnInit {
     this.newAnalyze.emit();
   }
 
-  onFix() {
-    this.issueFix.emit();
+  onFix($event) {
+    this.result = $event;
   }
 }
