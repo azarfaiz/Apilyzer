@@ -51,6 +51,9 @@ export class IssueComponent implements OnInit {
       case 'OPERATION_2XX_RESPONSE':
         this.fixForm.addControl('responseStatusCode', new FormControl(null));
         this.fixForm.addControl('description', new FormControl(null));
+        break;
+      case 'HTTP_SECURITY_SCHEME':
+        this.fixForm.addControl('url', new FormControl(null));
     }
   }
 
