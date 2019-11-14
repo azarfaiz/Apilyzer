@@ -19,10 +19,13 @@
   <form [formGroup]="rulesForm">
     <ng-container *ngFor="let _ of rulesForm.get('rules').controls; let i = index">
       <label class="container">
-        <small style="font-size: 60%; vertical-align: text-top;"> {{ rules.rules[i].ruleName | simpleName }} </small>
+        <div style="font-size: 80%;"> {{ rules.rules[i].ruleName | simpleName }} </div>
+        <div style="font-size: 50%;" class="badge-primary float-right px-2 border-radius-50"> {{rules.rules[i].category | simpleName}}</div>
+        <small style="font-size: 60%; vertical-align: text-top;" class="d-block"> {{rules.rules[i].summary | simpleName}}</small>
         <input type="checkbox" [formControl]="_">
-        <span class="checkmark"></span>
+        <span class="checkmark" style="margin-top: 5px;"></span>
       </label>
+      <hr>
     </ng-container>
   </form>
 

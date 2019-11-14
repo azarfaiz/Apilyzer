@@ -2,6 +2,7 @@ import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {AppService} from '../../service/app.service';
 import {RuleWrapperModel} from '../../model/rule.wrapper.model';
 import {FormArray, FormControl, FormGroup} from '@angular/forms';
+import {RuleModel} from '../../model/rule.model';
 
 @Component({
   selector: 'app-rules-configure',
@@ -27,6 +28,9 @@ export class RulesConfigureComponent implements OnInit {
     this.service.getAllConfiguredRules().subscribe(
       (response: RuleWrapperModel) => {
         this.rules = response;
+        let ruleModels: RuleModel[] = this.rules.rules;
+        ruleModels = ruleModels.sort((a: RuleModel, b: RuleModel) => a.category.localeCompare(b.category));
+        this.rules.rules = ruleModels;
         this.initRulesForm();
       }
     );
