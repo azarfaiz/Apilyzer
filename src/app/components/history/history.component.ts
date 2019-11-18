@@ -29,6 +29,7 @@ export class HistoryComponent implements OnInit {
       (response) => {
         this.data = response;
         this.sortByDate();
+        this.filterDuplicate();
       }
     );
   }
@@ -65,5 +66,17 @@ export class HistoryComponent implements OnInit {
   refresh() {
     this.selectedEvaluation = null;
     this.init();
+  }
+
+  private filterDuplicate() {
+    const apiNameList: string[] = [];
+    this.data = this.data.filter(v => {
+      if (apiNameList.find(a => a === v.apiName)) {
+        return false;
+      } else {
+        apiNameList.push(v.apiName);
+        return true;
+      }
+    });
   }
 }
