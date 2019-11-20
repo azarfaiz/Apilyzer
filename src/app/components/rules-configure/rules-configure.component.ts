@@ -51,4 +51,23 @@ export class RulesConfigureComponent implements OnInit {
       () => window.alert('saved successfully')
     );
   }
+
+  getRuleName(ruleName: string) {
+    switch (ruleName) {
+      case 'MISSING_INFO_DESC':
+        return 'Validate \'Info\' description';
+      case 'MISSING_SERVER_DESC':
+        return 'Validate \'Server\' description';
+      case 'HTTP_SECURITY_SCHEME':
+        return 'Validate security scheme';
+      case 'MISSING_SERVER_INFORMATION':
+        return 'Validate \'Server\' information';
+      case 'OPERATION_2XX_RESPONSE':
+        return 'Validate status code';
+      case 'MISSING_REQUEST_BODY_EXAMPLE':
+        return 'Validate request payload';
+      case 'MISSING_RESPONSE_EXAMPLE':
+        return 'Validate response payload';
+    }
+  }
 }

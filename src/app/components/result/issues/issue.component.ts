@@ -54,6 +54,10 @@ export class IssueComponent implements OnInit {
         break;
       case 'HTTP_SECURITY_SCHEME':
         this.fixForm.addControl('url', new FormControl(null));
+        break;
+      case 'MISSING_REQUEST_BODY_EXAMPLE':
+      case 'MISSING_RESPONSE_EXAMPLE':
+        this.fixForm.addControl('dummy', new FormControl(null));
     }
   }
 

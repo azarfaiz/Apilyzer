@@ -20,7 +20,15 @@
             <p style="font-size: 14px;">To fix this issue, enter the following details</p>
             <form [formGroup]="fixForm">
               <ng-container *ngFor="let key of getControlKeys()">
-                <input type="text" class="form-control mb-3" [formControlName]="key" [placeholder]="getPlaceHolderText(key) | simpleName">
+                <div *ngIf="key !== 'dummy'">
+                  <input type="text" class="form-control mb-3" [formControlName]="key" [placeholder]="getPlaceHolderText(key) | simpleName">
+                </div>
+                <div *ngIf="key === 'dummy'">
+                  <label for="checkbox">
+                    <input type="checkbox" id="checkbox" [formControl]="key"> Generate Example
+                  </label>
+                  <textarea class="form-control" rows="3" [disabled]="fixForm.value.dummy" placeholder="Enter the example"></textarea>
+                </div>
               </ng-container>
               <button class="mt-3 px-3 btn btn-sm btn-outline-success float-right" type="submit" (click)="onFix()"> Fix </button>
             </form>
